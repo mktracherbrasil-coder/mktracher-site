@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MK Tracher Monitoramento • Segurança e Tecnologia</title>
+  <meta name="description" content="Rastreamento veicular e gestão de frotas em Sinop‑MT. Monitoramento 24h, aplicativo no celular e suporte especializado." />
+  <style>
+    :root{
+      --primary:#0b5bd3;
+      --primary-dark:#073a86;
+      --accent:#12b76a;
+      --ink:#1f2937;
+      --muted:#64748b;
+      --bg:#0b0f19;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+      color:var(--ink);
+      background:#f5f7fb;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    /* Top bar */
+    .topbar{
+      background:var(--primary-dark);
+      color:#e5f0ff;
+      font-size:.9rem;
+      text-align:center;
+      padding:6px 12px;
+    }
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:#fff; border-bottom:1px solid #e5e7eb;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 20px;
+    }
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
+    .brand img{height:40px; width:auto; border-radius:6px; object-fit:contain; background:#fff}
+    .brand .title{font-weight:800; letter-spacing:.2px}
+    .brand .subtitle{display:block; font-size:.8rem; color:var(--muted); margin-top:-2px}
+    .cta-whats{
+      background:var(--accent); color:#fff; text-decoration:none;
+      padding:12px 18px; border-radius:10px; font-weight:700;
+      display:inline-flex; align-items:center; gap:8px; border:none;
+      box-shadow:0 6px 16px rgba(18,183,106,.25);
+    }
+    .cta-whats:hover{transform:translateY(-1px)}
+    /* Hero */
+    .hero{
+      background:linear-gradient( to bottom, rgba(11,15,25,.55), rgba(11,15,25,.75)),
+                 url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      color:#fff; padding:80px 20px; text-align:center;
+    }
+    .hero h1{font-size: clamp(1.8rem, 2.8vw + 1rem, 3rem); margin:0 0 12px; font-weight:900}
+    .hero p{margin:0 auto 22px; max-width:820px; color:#dbeafe}
+    .hero .actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:14px 20px; border-radius:10px; font-weight:800; letter-spacing:.2px;
+      text-decoration:none; border:2px solid transparent;
+    }
+    .btn--primary{background:var(--accent); color:#fff}
+    .btn--ghost{background:transparent; color:#fff; border-color:#93c5fd}
+    /* Sections */
+    section{max-width:1100px; margin:auto; padding:48px 20px}
+    .section-title{font-size:1.6rem; margin:0 0 24px; text-align:center}
+    .muted{color:var(--muted)}
+    /* Features grid */
+    .grid{display:grid; gap:18px}
+    @media (min-width:720px){ .grid{grid-template-columns:repeat(3,1fr)} }
+    .card{
+      background:var(--card); border-radius:14px; padding:18px;
+      box-shadow:0 6px 24px rgba(2,6,23,.06);
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .card img{width:100%; height:180px; object-fit:cover; border-radius:10px}
+    .card h3{margin:2px 0 6px}
+    /* Highlights */
+    .bullets{max-width:900px; margin:0 auto; display:grid; gap:10px}
+    @media (min-width:720px){ .bullets{grid-template-columns:repeat(2,1fr)} }
+    .bullet{background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:flex-start}
+    .bullet b{color:var(--primary)}
+    /* Gallery */
+    .gallery{display:grid; grid-template-columns:repeat(3,1fr); gap:8px}
+    .gallery img{width:100%; height:160px; object-fit:cover; border-radius:10px}
+    @media (max-width:720px){ .gallery{grid-template-columns:repeat(2,1fr)} }
+    /* Footer */
+    footer{background:#0b0f19; color:#cbd5e1; padding:30px 20px; margin-top:40px}
+    footer .wrap{max-width:1100px; margin:0 auto; display:grid; gap:14px}
+    .legal{font-size:.9rem; color:#94a3b8}
+    .pill{display:inline-block; background:#102043; color:#cfe1ff; padding:6px 10px; border-radius:999px; font-size:.85rem}
+    /* Helper: replace images */
+    .note{font-size:.9rem; color:#475569; background:#eef2ff; border-left:4px solid #6366f1; padding:10px 12px; border-radius:6px}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    📍 Atendemos Sinop‑MT e região • Monitoramento 24h • Suporte rápido
+  </div>
+
+  <header>
+    <a class="brand" href="#top" aria-label="MK Tracher homepage">
+      <!-- Troque o src abaixo por logo.png quando tiver o arquivo local -->
+      <img src="https://dummyimage.com/160x60/0b5bd3/ffffff&text=MK+Tracher" alt="Logo MK Tracher" />
+      <div class="title">
+        MK Tracher Monitoramento
+        <span class="subtitle">Segurança e tecnologia para veículos e frotas</span>
+      </div>
+    </a>
+    <a class="cta-whats" href="https://wa.me/5566992108634" target="_blank" rel="noopener">
+      💬 Falar no WhatsApp
+    </a>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <h1>Rastreamento em tempo real, do seu jeito.</h1>
+      <p>Localize, bloqueie e receba alertas instantâneos pelo aplicativo. Controle total do seu veículo ou frota com tecnologia confiável e suporte especializado.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="https://wa.me/5566992108634" target="_blank" rel="noopener">Quero uma proposta</a>
+        <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <h2 class="section-title">Nossos Serviços</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop" alt="SUV moderno em destaque" />
+          <h3>Rastreamento Veicular</h3>
+          <p>Aplicativo intuitivo para ver posição em tempo real, histórico de rotas e alertas inteligentes (ignição, cerca eletrônica, excesso de velocidade).</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1500043361747-422fe39d96f6?q=80&w=1200&auto=format&fit=crop" alt="Frota de caminhões na estrada" />
+          <h3>Gestão de Frotas</h3>
+          <p>Telemetria, relatórios de uso, produtividade e manutenção. Ideal para empresas que precisam reduzir custos e aumentar a segurança.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1200&auto=format&fit=crop" alt="Central de monitoramento" />
+          <h3>Central & Suporte 24h</h3>
+          <p>Equipe pronta para atender. Integração com bloqueio remoto (quando suportado) e contato rápido para emergências.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="por-que">
+      <h2 class="section-title">Por que escolher a MK Tracher?</h2>
+      <div class="bullets">
+        <div class="bullet"><b>✅ Monitoramento 24/7:</b>&nbsp; segurança contínua, com alertas e histórico.</div>
+        <div class="bullet"><b>⚙️ Tecnologia de ponta:</b>&nbsp; rastreadores e plataforma estáveis, com app simples.</div>
+        <div class="bullet"><b>👨‍🔧 Time especializado:</b>&nbsp; instalação e suporte feitos por quem entende.</div>
+        <div class="bullet"><b>📍 Atendimento local:</b>&nbsp; presença em Sinop‑MT e foco no cliente.</div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <h2 class="section-title">Fotos que representam o serviço</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=1200&auto=format&fit=crop" alt="App de rastreamento no celular" />
+        <img src="https://images.unsplash.com/photo-1515573998019-1c4e6f307eda?q=80&w=1200&auto=format&fit=crop" alt="Painéis e monitores" />
+        <img src="https://images.unsplash.com/photo-1516239322128-02207c117b2e?q=80&w=1200&auto=format&fit=crop" alt="Caminhão em rodovia" />
+      </div>
+      <p class="note" style="margin-top:10px">
+        Dica: quando tiver suas <b>fotos reais</b> (logo, loja, frota, instalação), troque as URLs acima pelos seus arquivos (ex.: <code>img/loja.jpg</code>, <code>img/frota.jpg</code>).
+      </p>
+    </section>
+
+    <section id="contato">
+      <h2 class="section-title">Fale com a gente</h2>
+      <p style="text-align:center" class="muted">
+        Quer orçamento rápido? Tire dúvidas no WhatsApp e receba um atendimento personalizado.
+      </p>
+      <div style="text-align:center; margin-top:10px">
+        <a class="cta-whats" href="https://wa.me/5566992108634" target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <span class="pill">MK Tracher Monitoramento</span>
+        <div style="margin-top:10px">📍 Sinop‑MT &nbsp;•&nbsp; 📞 (66) 99210‑8634</div>
+        <div class="legal" style="margin-top:8px">© 2025 MK Tracher Monitoramento — Todos os direitos reservados.</div>
+      </div>
+      <div class="legal">
+        <b>Como trocar a logo:</b> substitua o <code>src</code> da imagem no cabeçalho por <code>logo.png</code> (ou outro arquivo local).<br/>
+        <b>Como trocar o WhatsApp:</b> edite os links <code>wa.me/5566992108634</code> com o seu número no formato internacional (55 + DDD + número).
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
